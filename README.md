@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="706" height="288" src="./frontend/src/img/logo.png" alt="MonkeyBot logo">
+  <img width="706" height="288" src="./frontend/src/imgs/logo.png" alt="MonkeyBot logo">
 </p>
 
 # Data
