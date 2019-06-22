@@ -1,13 +1,10 @@
 {
-     
   "bugs": {
     "url": "https://github.com/food-nutrients/food-nutrients/issues"
   },
   "private": false,
   "homepage": "https://github.com/food-nutrients/food-nutrients#readme",
-  "repository": {
-   
-  },
+  "repository": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -16,13 +13,14 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "antd": "3.17.0",
+    "antd": "^3.17.0",
     "chart.js": "2.8.0",
     "immutability-helper": "3.0.0",
     "react": "^16.8.6",
     "react-chartkick": "0.3.0",
     "react-device-detect": "1.6.2",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "rxjs": "6.5.2",
     "shepherd.js": "2.8.0"
