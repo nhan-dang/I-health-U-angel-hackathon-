@@ -1,61 +1,33 @@
-import React, { Component } from 'react'
-import { from } from 'rxjs'
-import { map } from 'rxjs/operators'
-import MacroNutrients from './components/macro-nutrients'
-import MicroNutrients from './components/micro-nutrients'
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Nutritions from './components/Nutritions.js';
+import Recommend from './components/Recommend.js';
+import Login from './components/Login';
 
-import initTutorial from './components/tutorial'
-import Foods from './components/foods'
-import { calculateMacroNutrients, calculateMicroNutrients } from './components/calculations'
-
-import logo from './imgs/logo.png'
-
-// Datasets
-
-import nutrients from './data/nutrients.json'
-
-// Styles
-import './App.css'
-
-export default class App extends Component {
-	state = {}
-	nutrients$ = from(nutrients)
-	nutrientsLimited$ = from(nutrients).pipe(
-		map(nutrient => ({
-			name: nutrient.name,
-			rda: nutrient.rda,
-		})),
+export default function App() {
+	return (
+	  <Router>
+		<div>
+		  <ul>
+			<li>
+			  <Link to="/">Login</Link>
+			</li>
+			<li>
+			  <Link to="/#">About</Link>
+			</li>
+			<li>
+			<Link to="/recommend">Recommend System</Link>
+			</li>
+		  </ul>
+  
+		  <hr />
+  
+		  <Route exact path="/" component={Login} />
+		  <Route exact path="/nutritions" component={Nutritions}/>
+		  <Route exact path="/recommend" component={Recommend}/>
+		  {/* <Route path="/nutritions" component={About} />
+		  <Route path="/topics" component={Topics} /> */}
+		</div>
+	  </Router>
 	);
-
-	updateNutrients = selectedFoods$ => {
-		this.setState({
-			macroNutrients: calculateMacroNutrients(selectedFoods$),
-			microNutrients: calculateMicroNutrients(selectedFoods$, this.nutrientsLimited$),
-		})
-	}
-
-	componentDidMount() {
-		initTutorial()
-	}
-
-	render() {
-		console.log('App render');
-		return (
-			<div className="App">
-				<div className="leftPanel">
-					<div className="logo">
-						<img alt="Logo" src={logo} />
-					</div>
-					{/*Show search food*/}
-					<Foods updateNutrients={this.updateNutrients} />
-				</div>
-
-				{/* Show food nutrients */}
-				<div className="rightPanel">
-					<MacroNutrients macroNutrients={this.state.macroNutrients} />
-					<MicroNutrients definitions={nutrients} microNutrients={this.state.microNutrients} />
-				</div>
-			</div>
-		)
-	}
-}
+  }
