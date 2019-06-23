@@ -16,19 +16,19 @@ export default function App() {
 			<li>
 			  <Link to="/">Login</Link>
 			</li>
-			<li>
+			{/*<li>
 			  <Link to="/#">About</Link>
-			</li>
+			</li>*/}
 			<li>
 			<Link to="/recommend">Recommend System</Link>
 			</li>
 
 			<li>
 			<Link to="/familymeal">Choose your Family meal</Link>
-
-              <li>
-			<Link to="/test">Test get JSON</Link>
 			</li>
+              {/*<li>
+			<Link to="/test">Test get JSON</Link>
+			</li>*/}
 		  </ul>
   
 		  <hr />
