@@ -18,6 +18,7 @@ export default class MicroNutrients extends Component {
         group[current.type] = []
       }
       group[current.type].push(current)
+      console.log('- MicroNutritions list of type\n'+ group[0])
       return group
     }, {})
     return (

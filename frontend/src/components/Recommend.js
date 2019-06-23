@@ -1,12 +1,6 @@
 import React, { Component } from 'react'
 import { from } from 'rxjs'
 import { map } from 'rxjs/operators'
-import MacroNutrients from './macro-nutrients'
-import MicroNutrients from './micro-nutrients'
-
-
-import initTutorial from './tutorial'
-import Foods from './foods'
 import { calculateMacroNutrients, calculateMicroNutrients } from './calculations'
 
 import logo from '../imgs/logo.png'
@@ -36,7 +30,7 @@ export default class Nutritions extends Component {
 	}
 
 	componentDidMount() {
-		initTutorial()
+		
 	}
 
 	render() {
@@ -44,10 +38,10 @@ export default class Nutritions extends Component {
 		return (
 			<div className="App">
 				{/* Show food nutrients */}
-				<div className="rightPanel">
+				{/* <div className="rightPanel">
 					<MacroNutrients macroNutrients={this.state.macroNutrients} />
 					<MicroNutrients definitions={nutrients} microNutrients={this.state.microNutrients} />
-				</div>
+				</div> */}
 			</div>
 		)
 	}

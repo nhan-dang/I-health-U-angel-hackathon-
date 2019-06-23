@@ -54,7 +54,7 @@ export default class Nutritions extends Component {
 				{/* Show food nutrients */}
 				<div className="rightPanel">
 					<MacroNutrients macroNutrients={this.state.macroNutrients} />
-					<MicroNutrients definitions={nutrients} microNutrients={this.state.microNutrients} />
+					{/* <MicroNutrients definitions={nutrients} microNutrients={this.state.microNutrients} /> */}
 				</div>
 			</div>
 		)
