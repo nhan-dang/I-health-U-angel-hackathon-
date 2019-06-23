@@ -26,10 +26,10 @@ Feel free to add suggestions, PRs, comments and bug reports.
 
 ## Authors
 references
-  Alex Kolarski (aleks.rk@gmail.com)
-  Boris Minev (boriss.minev@gmail.com)
+  - Alex Kolarski (aleks.rk@gmail.com)
+  - Boris Minev (boriss.minev@gmail.com)
 Dev:
-  Huu Hien Le, member of MinkeyBot team
+  - Huu Hien Le, member of MinkeyBot team
 
 ## How to run
 
