@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>For Health!</h1>
+
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            <h3>{{ form.estimated_number.label }}</h3>
+            {{ form.estimated_number(size=10) }}<br>
+            {% for error in form.estimated_number.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+
+        </p>
+        <p>
+            <h2>{{ form.fat_num.label }}</h2>
+            {{ form.fat_num(size=10) }}<br>
+            {% for error in form.fat_num.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+	
+	    	{% for rec in fat_rec %}
+	        <div><p>{{ rec.serving }} servings of {{ rec.name }} </b></p></div>
+	        {% endfor %}
+        </p>
+        <p>
+            <h2>{{ form.pro_num.label }}</h2>
+            {{ form.pro_num(size=10) }}<br>
+            {% for error in form.pro_num.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+
+            {% for rec in pro_rec %}
+	        <div><p>{{ rec.serving }} servings of {{ rec.name }} </b></p></div>
+	        {% endfor %}
+        </p>
+        <p>
+            <h2>{{ form.carb_num.label }}</h2>
+            {{ form.carb_num(size=10) }}<br>
+            {% for error in form.carb_num.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+
+            {% for rec in carb_rec %}
+	        <div><p>{{ rec.serving }} servings of {{ rec.name }} </b></p></div>
+	        {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+    <a href="{{ url_for('index') }}">Back</a>
+{% endblock %}

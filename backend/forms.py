@@ -26,3 +26,10 @@ class RegistrationForm(FlaskForm):
         user = User.query.filter_by(email=email.data).first()
         if user is not None:
             raise ValidationError('Please use a different email address.')
+
+class FoodTypeForm(FlaskForm):
+    estimated_number = StringField('Number of people', validators=[DataRequired()])
+    fat_num  = StringField('Fat', validators=[DataRequired()])
+    pro_num  = StringField('Proteins', validators=[DataRequired()])
+    carb_num = StringField('Carbohydrates', validators=[DataRequired()])
+    submit = SubmitField('Find')
