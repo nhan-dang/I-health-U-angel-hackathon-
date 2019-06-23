@@ -2,12 +2,22 @@ import json
 import os
 import sys
 
-
 def load_data(path):
     with open(path, 'r') as file:
         content = file.read()
     food_data_array = json.loads(content)
     new_dict = dict()
+
+    # base recommendation 
+    base = access_new_json(os.path.join(os.getcwd(), "categories.json"))[0]
+
+    # for normalizing the ratings
+    import numpy as np
+    def softmax(x):
+	    """Compute softmax values for each sets of scores in x."""
+	    e_x = np.exp(x - np.max(x))
+	    return list(e_x / e_x.sum())
+
     for i in food_data_array:
         if i['name'] not in new_dict:
             new_dict.setdefault(i['name'], dict())
@@ -22,6 +32,10 @@ def load_data(path):
                 new_dict[i['name']]['fibers'] = 0
             else:
                 new_dict[i['name']]['fibers'] = i['fibers']
+
+            new_dict[i['name']]['ratings'] = softmax([i['fat']*i['serving']           / base['fat'],
+            										  i['proteins']*i['serving']      / base['proteins'],
+            										  i['carbohydrates']*i['serving'] / base['carbohydrates']])
         else:
             pass
     return new_dict
@@ -35,8 +49,8 @@ def write_new_json(path, new_dict):
 def access_new_json(path):
     with open(path, 'r') as file:
         content = file.read()
-    food_data_array = json.loads(content)
-    print(food_data_array)
+    data = json.loads(content)
+    return data
 
 
 if __name__ == "__main__":
