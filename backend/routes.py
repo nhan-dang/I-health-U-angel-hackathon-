@@ -165,3 +165,9 @@ def recommend():
             carb_rec[i3]['serving'] = carb_rec[i3]['serving'] * number_of_people
 
     return render_template('recommend.html', title='Recommendation', form=form, fat_rec=fat_rec, pro_rec=pro_rec, carb_rec=carb_rec)
+
+
+@app.route('/api/test')
+def get_data():
+    return {'test': 'test1',
+            'testa': 'testa1'}
