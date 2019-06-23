@@ -1,5 +1,8 @@
+# Description
+Our project gives a way to calculate nutrition in your meal(s), gives recommendations for your meal(s), makes your meal(s) not only better and suitable for your health but also reasonable for your spending money. Our project suggests a new business area for VN Post, brings VN Post closer to every family daily life, indirectly creates a new fresh ingredients supply chain.
+
 <p align="center">
-  <img width="706" height="288" src="./frontend/src/imgs/logo.png" alt="MonkeyBot logo">
+  <img width="318" height="322" src="./frontend/src/imgs/logo.png" alt="MonkeyBot logo">
 </p>
 
 # Data
