@@ -20,7 +20,7 @@ references
   Alex Kolarski (aleks.rk@gmail.com)
   Boris Minev (boriss.minev@gmail.com)
 Dev:
-  Huu Hien Le, member of MonkeyBot team
+  Huu Hien Le, member of MinkeyBot team
 
 ## How to run
 
