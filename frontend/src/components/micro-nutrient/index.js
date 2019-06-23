@@ -67,7 +67,7 @@ export default class MicroNutrient extends Component {
       <div key={name} className="microNutrient">
         <div className="microNutrientName">
           <a target="_blank" rel="noopener noreferrer" href={wiki}>
-            {name}
+            {name+':'}
           </a>
         </div>
         <div className="microNutrientProgressBar">
