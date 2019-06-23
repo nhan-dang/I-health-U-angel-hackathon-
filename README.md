@@ -16,6 +16,12 @@ We wanted to keep it simple and may move to using the [USDA Food Database](https
 
 ## Contribution
 
+- Đặng Tâm Nhân - Process data and Implement UI
+- Lê Hữu Hiền - Design front-end with ReactJS
+- Chung Minh Nhật - Design project operations with Python
+- Nguyễn Xuân Tùng - Process data with Python
+- Đoàn Ý Nhi - Analyze and Design business models
+
 Feel free to add suggestions, PRs, comments and bug reports.
 
 ## Authors
