@@ -21,7 +21,7 @@
     "react-device-detect": "1.6.2",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "rxjs": "6.5.2",
     "shepherd.js": "2.8.0"
   },
